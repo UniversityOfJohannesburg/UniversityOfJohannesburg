@@ -1,0 +1,361 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript">
+   
+var msg_box ="Right-mouse click has been disabled.";
+
+function dis_rightclickIE(){
+	if (navigator.appName == 'Microsoft Internet Explorer' && (event.button == 2 || event.button == 3))
+		alert(msg_box)
+}
+
+function dis_rightclickNS(e){
+	if ((document.layers||document.getElementById&&!document.all) && (e.which==2||e.which==3))
+	{
+	alert(msg_box)
+	return false;
+	}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=dis_rightclickNS;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=dis_rightclickIE;
+}
+document.oncontextmenu=new Function("alert(msg_box);return false")
+
+  
+                  function onKeyDown() 
+                    {
+                      // current pressed key
+                      var pressedKey = String.fromCharCode(event.keyCode).toLowerCase();
+
+                      if (event.ctrlKey && pressedKey == "c") 
+                      {
+                        // disable key press porcessing
+                        event.returnValue = false;
+                        alert("The copy function has been disabled");
+                      }
+                      }
+    
+    
+    
+            function doFocus()
+             {
+
+             }
+
+             function LoadUrl(arugment) {
+              //setup the command details
+               var Command = arugment;
+                var context = new Object();
+                context.CommandName = "LoadStudentFile";// doesn't matter
+               WebForm_DoCallback('__Page',Command,CallBackHandler,context,null,false)
+          
+             }
+
+             function CallBackHandler(result, context)
+             {
+
+                 debugger;
+                 var btn = document.getElementById('btnDownloadFile');
+                 if (btn) {
+                     btn.click(); // Simulate a click event
+                 }
+
+
+               if (result == "None")
+                {
+                 alert("No letter has been issued for the selected qualification."); 
+                }
+                else
+                {
+                  // window.location.href = "ApplicationStatus.aspx";
+                }
+
+                return false;
+             }
+
+            function clickHiddenButton() {
+                // Find the hidden button by its client ID
+                var btn = document.getElementById('btnDownloadFile');
+
+                if (btn) {
+                    btn.click(); // Simulate a click event
+                }
+            }
+</script>
+
+
+<link rel="SHORTCUT ICON" href="images/favicon.ico"><title>
+	University of Johannesburg - Student Portal
+</title>
+    <!--<meta name="description" content="The student portal is your access to point to information relating to your studies at the Univeristy of Johannesburg" /><meta name="keywords" content="UJ Student Portal, RAU student Portal, UJ, RAU, Univeristy of Johannesburg, Randse Afrikaanse Univeristeit" />-->
+    </head>
+<body style="font-size: 12pt; margin-left: 0; margin-top: 0; margin-right: 0; background-color: #aeaeae" onload="doFocus();" onkeydown="onKeyDown();">
+    <form method="post" action="./ApplicationStatus" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="_EVENTTARGET" id="_EVENTTARGET" value="">
+<input type="hidden" name="_EVENTARGUMENT" id="_EVENTARGUMENT" value="">
+<input type="hidden" name="_VIEWSTATE" id="_VIEWSTATE" value="QgfyP+eQQGEkzqKIOAm1xaZr3vgQfsKOftbCqw8sOA33+DlYkgni5z30/uSHwktCT/8TATP8+dQFT39S1W5epkQNwfRlPRynvQY81m5I9sM=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMxzZtYkqScLc6mBMiA6k3OjjJlfwJglDdWm8M1UzvBs2U7fhhWBsOnMHEzaeG0G-Q2&amp;t=638628279619783110" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="_VIEWSTATEGENERATOR" id="_VIEWSTATEGENERATOR" value="3CFDDA1E">
+	<input type="hidden" name="_EVENTVALIDATION" id="_EVENTVALIDATION" value="nqzZ8OIXP9YXvJkLjsJBhDmWkwDGuFZ99UxftHjbZqb3gTTbzpGbTnv1TXyOeXbu6Fh8GW+mSkWkvQccG+r51H0sRqjcc0UTM5U3mttLvjj68i65+SAeMHwvesXxPvXl">
+</div>
+        <div>
+            <table cellspacing="0" cellpadding="0" width="100%" style="font-family: Arial;">
+                <tbody><tr>
+                    <td colspan="1" style="background-image: url(bgimages/header_top.jpg); height: 24px;
+                        text-align: right; width: 5%;">
+                        </td>
+                    <td colspan="1" style="background-image: url(bgimages/header_top.jpg); height: 24px;
+                        text-align: left">
+                        <span style="font-family: Arial Baltic"><strong></strong></span></td>
+                    <td colspan="1" style="background-image: url(bgimages/header_top.jpg); height: 24px;
+                        text-align: right">
+                        <img src="bgimages/UJ_header_Logo.jpg" alt="University of Johannesburg"></td>
+                    <td style="background-image: url(bgimages/header_top.jpg); height: 24px; text-align: right;
+                        width: 10%;">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="1" style="background-image: url(bgimages/header_orange_grey_split.jpg);
+                        height: 12px">
+                    </td>
+                    <td colspan="3" style="background-image: url(bgimages/header_orange_grey_split.jpg);
+                        height: 12px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color: #3d3d3d; text-align: left">
+                        &nbsp;
+                    </td>
+                    <td colspan="2" style="background-color: #3d3d3d; text-align: right">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-image: url(bgimages/header_bottom.jpg); height: 15px;">
+                    </td>
+                    <td colspan="2" style="background-image: url(bgimages/header_bottom.jpg); height: 15px">
+                    </td>
+                </tr>
+            </tbody></table>
+            <!-- <div style="background-color: white;">-->
+            <!--#b1b1b1-->
+            <table width="90%" border="0" align="center">
+                <tbody><tr>
+                    <td align="center">
+                        <table width="100%">
+                            <tbody><tr>
+                                <td align="right">
+                                    &nbsp;</td>
+                            </tr>
+                        </tbody></table>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0" style="font-family: Arial;">
+                            <tbody><tr>
+                                <td style="background-image: url(bgimages/body_left_top_corner.jpg); height: 16px;
+                                    width: 12px">
+                                </td>
+                                <td colspan="2" style="background-image: url(bgimages/body_top.jpg); height: 16px;
+                                    text-align: left;">
+                                </td>
+                                <td style="background-image: url(bgimages/body_top_right_corner.jpg); height: 16px;
+                                    width: 13px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-image: url(bgimages/body_left.jpg); height: 12px; width: 12px;">
+                                </td>
+                                <td colspan="2" rowspan="3" style="background-color: #3d3d3d; text-align: left;">
+                                    <span style="font-size: 16pt; color: #ffffff;">Welcome to the Student Portal</span></td>
+                                <td style="background-image: url(bgimages/body_right.jpg); height: 12px; width: 13px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-image: url(bgimages/body_left.jpg); height: 12px; width: 12px;">
+                                </td>
+                                <td style="background-image: url(bgimages/body_right.jpg); height: 12px; width: 13px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-image: url(bgimages/body_left.jpg); height: 12px; width: 12px;">
+                                </td>
+                                <td style="background-image: url(bgimages/body_right.jpg); height: 12px; width: 13px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-image: url(bgimages/body_left_gray.jpg); width: 12px;">
+                                </td>
+                                <td style="text-align: left; background-color: #939393; vertical-align: top;" width="20%"><br> 
+                                    <span style="font-size: 16pt; color: #ffffff;"><a style="font-size: 16pt; color: #3d3d3d; text-decoration:none" href="TelephoneVerification.aspx?n=y">Check your admission status + all relevant communication</a></span>
+                                </td>
+                                <td style="background-color: White; color: #000000;">
+                                    <table width="100%">
+                                        <tbody><tr>
+                                            <td width="60%" valign="top">
+                                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                    <tbody><tr>
+                                                        <td style="background-image: url(bgimages/content_top_left.jpg); height: 53px; width: 9px">
+                                                        </td>
+                                                        <td style="background-image: url(bgimages/content_top_center.jpg); height: 53px;" align="left">
+                                                            <b>Application Status</b></td>
+                                                        <td style="background-image: url(bgimages/content_top_right.jpg); height: 53px; width: 9px">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-image: url(bgimages/content_left.jpg); width: 9px">
+                                                        </td>
+                                                        <td align="left"><br>
+                                                           <!-- <marquee id="ScrollingBanner" behavior=""><font face="Verdana" size="2pt">NOTE :  Error on 2010 Admin Year Planner for students – first recess starts 2 April 2010 and NOT 29 March 2010.</font></marquee>-->
+                                                            
+                                                           
+                                                          <table>
+  <tbody><tr>
+    <td>
+          Below is a list of the courses for which you have applied.
+        </td>
+  </tr>
+</tbody></table>
+<table border="1" width="95%" cellspacing="0" cellpadding="3" style="font-size: 9pt;">
+  <tbody><tr bgcolor="silver">
+    <th>Student Number</th>
+    <th>Academic Year</th>
+    <th>Qualification</th>
+    <th>Status Description</th>
+  </tr>
+  <tr>
+    <td valign="top">251167406</td>
+    <td valign="top">2025</td>
+    <td valign="top">B4L03Q: LLB IN LAW </td>
+    <td>
+      <strong>5.UNCONDITIONAL ACCEPTANCE </strong>
+      <font color="Black">
+        <ul>
+        </ul>
+      </font>
+    </td>
+  </tr>
+</tbody></table>
+<table>
+  <tbody><tr>
+    <td>
+      <br>
+      <br>
+    </td>
+  </tr>
+</tbody></table>
+
+                                                             <table>
+  <tbody><tr>
+    <td>
+    </td>
+  </tr>
+</tbody></table>
+<table border="1" width="95%" cellspacing="0" cellpadding="3" style="font-size: 9pt;">
+  <tbody><tr bgcolor="silver">
+    <th>Status Description</th>
+    <th>Correspondence</th>
+  </tr>
+  <tr>
+    <td>Univ. of Jhb - SA ID Received / Already in posession of UJ</td>
+    <td align="center">
+      <a href="#" onclick="LoadUrl('139725010')" runat="server">View</a>
+    </td>
+  </tr>
+</tbody></table>
+<table>
+  <tbody><tr>
+    <td>
+      <br>
+      <br>
+          Please contact the University (011 559 4555) should you require further
+          assistance.
+        </td>
+  </tr>
+</tbody></table>
+                                                            
+                                                            <br>
+                                    <span id="lblInfo" style="color:Red;font-family:Arial;font-weight:bold;"></span><br>
+                                                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            
+                                                            <br>
+                                                            
+                                                           
+                                                           </td>
+                                                        <td style="background-image: url(bgimages/content_right.jpg); width: 9px">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-image: url(bgimages/content_bottom_left.jpg); height: 7px;
+                                                            width: 9px">
+                                                        </td>
+                                                        <td style="background-image: url(bgimages/content_bottom_center.jpg); height: 7px;">
+                                                        </td>
+                                                        <td style="background-image: url(bgimages/content_bottom_right.jpg); height: 7px;
+                                                            width: 9px">
+                                                        </td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                        </tr>
+                                        <tr><td>
+                                            <input type="submit" name="btnDownloadFile" value="" id="btnDownloadFile" style="display:none;"></td></tr>
+                                    </tbody></table>
+                                </td>
+                                <td style="background-image: url(bgimages/body_right.jpg); height: 12px; width: 13px;
+                                    color: #000000;">
+                                </td>
+                            </tr>
+                            <tr style="color: #000000">
+                                <td style="background-image: url(bgimages/footer_left.jpg); height: 35px; width: 12px">
+                                </td>
+                                <td colspan="2" style="background-image: url(bgimages/footer_center.jpg); height: 35px;">
+                                 <p class="MsoNormal" style="margin: 0in 0in 0pt">
+                        <span style="font-family: Verdana"><span style="font-size: 7pt"><span style="color: white">
+                            Copyright © 2008 - University of Johannesburg</span></span></span></p>
+                    
+                                </td>
+                                <td style="background-image: url(bgimages/footer_right.jpg); height: 35px; width: 13px">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <a href="UJterms.htm" style="text-decoration: none" target="_blank"><span style="color: white;
+                        font-family: Verdana; font-size: 7pt">Terms and Conditions</span></a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdfCweRj75DCDEBxiczsmgECqh812FTYzY_EvBkakAy9b00TOlKN2eLFhH6t2mxQdeg2&t=638628279619783110';
+WebForm_InitCallback();//]]>
+</script>
+</form>
+
+
+</body></html>
